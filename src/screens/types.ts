@@ -1,4 +1,6 @@
+import {ProductType} from '../types';
+
 export type RootStackParamList = {
   Home: undefined;
-  About: undefined;
+  Detail: ProductType;
 };
