@@ -781,9 +781,13 @@ PODS:
     - Firebase/Firestore (= 8.8.0)
     - React-Core
     - RNFBApp
+  - RNGestureHandler (1.10.3):
+    - React-Core
   - RNScreens (3.8.0):
     - React-Core
     - React-RCTImage
+  - RNSharedElement (0.8.3):
+    - React-Core
   - RNVectorIcons (9.0.0):
     - React-Core
   - Yoga (1.14.0)
@@ -847,7 +851,9 @@ DEPENDENCIES:
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - "RNFBAuth (from `../node_modules/@react-native-firebase/auth`)"
   - "RNFBFirestore (from `../node_modules/@react-native-firebase/firestore`)"
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNSharedElement (from `../node_modules/react-native-shared-element`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -950,8 +956,12 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-firebase/auth"
   RNFBFirestore:
     :path: "../node_modules/@react-native-firebase/firestore"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNSharedElement:
+    :path: "../node_modules/react-native-shared-element"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   Yoga:
@@ -1019,7 +1029,9 @@ SPEC CHECKSUMS:
   RNFBApp: 729c0666395b1953198dc4a1ec6deb8fbe1c302e
   RNFBAuth: 7718be1152f5d1d0bb970a8d33094d010f1ac21c
   RNFBFirestore: eef5fd4cfbe35316af559631db06a34b8391628a
+  RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNScreens: 6e1ea5787989f92b0671049b808aef64fa1ef98c
+  RNSharedElement: 381b5e33366513cc3f449f2dc3a42c5df0f54021
   RNVectorIcons: 4143ba35feebab8fdbe6bc43d1e776b393d47ac8
   Yoga: 2b4a01651f42a32f82e6cef3830a3ba48088237f
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a

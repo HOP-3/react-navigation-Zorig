@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
+import {View, Text, FlatList, Image, StyleSheet} from 'react-native';
 
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {View, Text, FlatList, Image, StyleSheet} from 'react-native';
+import {SharedElement} from 'react-navigation-shared-element';
 
 import firestore, {
   FirebaseFirestoreTypes,
@@ -42,16 +43,22 @@ const Home = ({navigation}: Props) => {
 
   const renderItem = ({item}: {item: ProductType}) => {
     return (
-      <View style={styles.item}>
-        <Image source={{uri: item.image}} style={{width: 100, height: 100}} />
-        <View style={{justifyContent: 'center', marginHorizontal: 10}}>
-          <Link
-            text={item.name}
-            onPress={() => navigation.navigate('Detail', item)}
-          />
-          <Text>{item.price}</Text>
+      <>
+        <SharedElement id={`item.${item.id}.image`}>
+          <Image source={{uri: item.image}} style={{width: 100, height: 100}} />
+        </SharedElement>
+        <View style={styles.item}>
+          <View style={{justifyContent: 'center', marginHorizontal: 10}}>
+            <Link
+              text={item.name}
+              onPress={() => navigation.navigate('Detail', item)}
+            />
+            <SharedElement id={`item.${item.id}.price`}>
+              <Text>{item.price}</Text>
+            </SharedElement>
+          </View>
         </View>
-      </View>
+      </>
     );
   };
 
